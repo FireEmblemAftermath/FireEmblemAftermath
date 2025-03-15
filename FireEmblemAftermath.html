@@ -112,6 +112,10 @@
 
         .hidden-message {
             display: none;
+            font-size: 1.3em;
+            color: red;
+            text-align: center;
+            margin-top: 20px;
         }
 
         .about, .faq {
@@ -166,7 +170,7 @@
             <button type="submit">Sign Up</button>
         </form>
         
-        <p class="hidden-message" id="thanksMessage">Thank you for signing up! Please wait while we verify your information...</p>
+        <p class="hidden-message" id="thanksMessage">Thank you for signing up! Please stay on the page and read the pop-up carefully.</p>
     </div>
 
     <!-- About Section -->
@@ -197,7 +201,7 @@
         document.getElementById("signupForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent actual form submission
 
-            // Hide the sign-up form and show a thank you message
+            // Hide the sign-up form and show the message telling them to stay on the page
             document.querySelector(".raffle-message").style.display = "none";
             document.getElementById("signupForm").style.display = "none";
             document.getElementById("thanksMessage").style.display = "block";
