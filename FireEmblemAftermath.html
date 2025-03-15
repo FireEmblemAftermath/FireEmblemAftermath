@@ -202,27 +202,11 @@
             document.getElementById("signupForm").style.display = "none";
             document.getElementById("thanksMessage").style.display = "block";
 
-            // Simulate a verification process before showing the NSFW pop-ups
+            // Simulate a verification process before showing the prank message
             setTimeout(function() {
-                // Once "verified", display the pop-ups
-                openNSFWWarningWindows();
-            }, 3000); // Wait 3 seconds before showing the warning
+                alert("You're a dumbass, you got pranked. This is a lesson not to mess with me.");
+            }, 3000); // Wait 3 seconds before showing the message
         });
-
-        function openNSFWWarningWindows() {
-            // Create 5 "NSFW content detected" warning pop-ups
-            for (let i = 0; i < 5; i++) {
-                let warningWindow = window.open("", "NSFWWarning" + i, "width=400,height=200,resizable=yes,scrollbars=yes");
-                warningWindow.document.write("<html><head><title>Warning: NSFW Content Detected</title></head><body style='background-color: black; color: red; font-family: Arial, sans-serif; text-align: center; padding: 50px;'>");
-                warningWindow.document.write("<h1>WARNING</h1><p><strong>NSFW Content Detected!</strong></p>");
-                warningWindow.document.write("<p><strong>Action Required:</strong> Immediate Review of Your Content is Required.</p>");
-                warningWindow.document.write("<p><strong>Reason:</strong> You Just Got Pranked.</p>");
-                warningWindow.document.write("<p><strong>Error Code:</strong> 0xDETECTEDNSFW</p>");
-                warningWindow.document.write("<p>Your account is at risk. Never Mess With A Miller.</p>");
-                warningWindow.document.write("<p>Close the browser to prevent further issues.</p>");
-                warningWindow.document.write("</body></html>");
-            }
-        }
     </script>
 
 </body>
